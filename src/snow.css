@@ -1,0 +1,8 @@
+.snowflake {
+  position: absolute;
+  top: -15px;
+  background-color: #fff;
+  box-shadow: 0 0 2px #fff;
+  border-radius: 50%;
+  z-index: -1;
+}

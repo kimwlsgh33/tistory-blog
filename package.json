@@ -1,0 +1,20 @@
+{
+  "name": "hello-fp",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest",
+    "vite": "^5.0.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "bunx --bun vite",
+    "build": "rm -rf ./dist && tsc && vite build && bun run copy-asset",
+    "copy-asset": "cp -r ./source/* ./dist/images/"
+  },
+  "dependencies": {
+    "disable-devtool": "^0.3.6"
+  }
+}
