@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "bunx --bun vite",
     "build": "rm -rf ./dist && tsc && vite build && bun run copy-asset",
-    "copy-asset": "cp -r ./source/* ./dist/images/"
+    "copy-asset": "cp ./index.xml ./dist/ && cp -r ./source/* ./dist/images/"
   },
   "dependencies": {
     "disable-devtool": "^0.3.6"

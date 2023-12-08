@@ -36,4 +36,10 @@ To build for release:
 bun run build
 ```
 
+## Announce
+
+Vite's build recognize <code>skin.html</code> in <code>vite.config.js</code>, then it builds all the files that connected with skin.html file.
+
+If you doesn't want to use disable-devtools, remove import line for <code>utils.ts</code> in <code>skin.html</code>
+
 This project was created using `bun init` in bun v1.0.15. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
