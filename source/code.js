@@ -25,7 +25,9 @@ window.addEventListener("DOMContentLoaded", function () {
     const codes = codeBlock.innerHTML.match(/(.*)(\n|.*$)/g);
 
     const processedCodes = codes.reduce(
-      (prevCodes, curCode) => prevCodes + `<div class="line">${curCode}</div>`,
+      (prevCodes, curCode) =>
+        prevCodes +
+        `<div class="line text-h-900 dark:text-h-200 hover:bg-h-100 dark:hover:bg-h-800">${curCode}</div>`,
       "",
     );
 
