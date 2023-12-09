@@ -35,19 +35,21 @@
       }
 
       window.TTDARK = localStorage.TTDARK === 'Y'
-
       document.documentElement.classList.toggle('dark', TTDARK)
     </script>
     <script defer src="./images/script.js"></script>
     <script defer src="./images/app.js"></script>
     <script defer src="./images/vendor.js"></script>
-    <script defer type="module" src="./src/snow.ts"></script>
     <!-- <script defer type="module" src="./src/utils.ts"></script> -->
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./input.css">
+    <script defer type="module" src="./src/snow.ts"></script>
     <link rel="stylesheet" href="./src/snow.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./src/code.css">
   </head>
 
   <body class="min-w-xs overflow-x-hidden bg-h-100 text-h-900 dark:bg-h-800 dark:text-h-200" id="[##_body_id_##]" oncontextmenu="return false">
+    <script defer src="./images/code.js"></script>
     <div class="w-screen h-screen fixed top-0 left-0 z-50 flex items-center justify-center bg-h-100 dark:bg-h-800" id="loader" x-show="loading" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
       <div class="rounded-full w-14 h-14 my-14 mx-auto text-base relative border-2 border-solid border-h-500/20 border-l-h-500 dark:border-h-100/20 dark:border-l-h-100 animate-loading"></div>
     </div>
@@ -67,17 +69,17 @@
                     <div class="text-3xl font-bold text-h-600 dark:text-h-200 my-10 empty:my-10 lg:my-20">[##_cover_title_##]</div>
                     <div class="list">
                       <s_cover_item>
-                        <div class="post">
-                          <s_cover_item_thumbnail><a class="thumbnail rounded shadow-lg overflow-hidden" href="[##_cover_item_url_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_cover_item_thumbnail_##]" data-sizes="auto" alt=""></a></s_cover_item_thumbnail>
+                        <div class="post rounded-lg shadow-lg overflow-hidden dark:bg-h-500">
+                          <s_cover_item_thumbnail><a class="thumbnail" href="[##_cover_item_url_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_cover_item_thumbnail_##]" data-sizes="auto" alt=""></a></s_cover_item_thumbnail>
                           <s_cover_item_article_info>
-                            <div class="description flex flex-col">
+                            <div class="description flex flex-col px-2 py-2">
                               <div class="title"><a class="text-h-800 dark:text-h-200" href="[##_cover_item_url_##]">[##_cover_item_title_##]</a></div>
                               <div class="metainfo flex gap-x-1 text-sm"><time class="text-h-400">[##_cover_item_simple_date_##]</time><a class="text-sm text-h-400" href="[##_cover_item_category_url_##]">· [##_cover_item_category_##]</a></div>
                               <div class="summary relative overflow-hidden leading-7 text-sm text-h-500 dark:text-h-400">[##_cover_item_summary_##]</div>
                             </div>
                           </s_cover_item_article_info>
                           <s_cover_item_not_article_info>
-                            <div class="description flex flex-col">
+                            <div class="description flex flex-col px-2 py-2">
                               <div class="title"><a class="text-h-800 dark:text-h-200" href="[##_cover_item_url_##]">[##_cover_item_title_##]</a></div>
                               <div class="summary">[##_cover_item_summary_##]</div>
                             </div>
@@ -92,17 +94,17 @@
                     <div class="text-3xl font-bold text-h-600 dark:text-h-200 my-10 empty:my-10 lg:my-20">[##_cover_title_##]</div>
                     <div class="list">
                       <s_cover_item>
-                        <div class="post">
-                          <s_cover_item_thumbnail><a class="thumbnail rounded shadow-lg overflow-hidden" href="[##_cover_item_url_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_cover_item_thumbnail_##]" data-sizes="auto" alt=""></a></s_cover_item_thumbnail>
+                        <div class="post rounded-lg shadow-lg overflow-hidden dark:bg-h-500">
+                          <s_cover_item_thumbnail><a class="thumbnail" href="[##_cover_item_url_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_cover_item_thumbnail_##]" data-sizes="auto" alt=""></a></s_cover_item_thumbnail>
                           <s_cover_item_article_info>
-                            <div class="description flex flex-col">
+                            <div class="description flex flex-col px-2 py-2">
                               <div class="title"><a class="text-h-800 dark:text-h-200" href="[##_cover_item_url_##]">[##_cover_item_title_##]</a></div>
                               <div class="metainfo flex gap-x-1 text-sm"><time class="text-h-400">[##_cover_item_simple_date_##]</time><a class="text-sm text-h-400" href="[##_cover_item_category_url_##]">· [##_cover_item_category_##]</a></div>
                               <div class="summary relative overflow-hidden leading-7 text-sm text-h-500 dark:text-h-400">[##_cover_item_summary_##]</div>
                             </div>
                           </s_cover_item_article_info>
                           <s_cover_item_not_article_info>
-                            <div class="description flex flex-col">
+                            <div class="description flex flex-col px-2 py-2">
                               <div class="title"><a class="text-h-800 dark:text-h-200" href="[##_cover_item_url_##]">[##_cover_item_title_##]</a></div>
                               <div class="summary">[##_cover_item_summary_##]</div>
                             </div>
@@ -117,17 +119,17 @@
                     <div class="text-3xl font-bold text-h-600 dark:text-h-200 my-10 empty:my-10 lg:my-20">[##_cover_title_##]</div>
                     <div class="list">
                       <s_cover_item>
-                        <div class="post">
-                          <s_cover_item_thumbnail><a class="thumbnail rounded shadow-lg overflow-hidden" href="[##_cover_item_url_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_cover_item_thumbnail_##]" data-sizes="auto" alt=""></a></s_cover_item_thumbnail>
+                        <div class="post rounded-lg shadow-lg overflow-hidden dark:bg-h-500">
+                          <s_cover_item_thumbnail><a class="thumbnail" href="[##_cover_item_url_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_cover_item_thumbnail_##]" data-sizes="auto" alt=""></a></s_cover_item_thumbnail>
                           <s_cover_item_article_info>
-                            <div class="description flex flex-col">
+                            <div class="description flex flex-col px-2 py-2">
                               <div class="title"><a class="text-h-800 dark:text-h-200" href="[##_cover_item_url_##]">[##_cover_item_title_##]</a></div>
                               <div class="metainfo flex gap-x-1 text-sm"><time class="text-h-400">[##_cover_item_simple_date_##]</time><a class="text-sm text-h-400" href="[##_cover_item_category_url_##]">· [##_cover_item_category_##]</a></div>
                               <div class="summary relative overflow-hidden leading-7 text-sm text-h-500 dark:text-h-400">[##_cover_item_summary_##]</div>
                             </div>
                           </s_cover_item_article_info>
                           <s_cover_item_not_article_info>
-                            <div class="description flex flex-col">
+                            <div class="description flex flex-col px-2 py-2">
                               <div class="title"><a class="text-h-800 dark:text-h-200" href="[##_cover_item_url_##]">[##_cover_item_title_##]</a></div>
                               <div class="summary">[##_cover_item_summary_##]</div>
                             </div>
@@ -142,17 +144,17 @@
                     <div class="swiper w-full h-screen">
                       <div class="list swiper-wrapper">
                         <s_cover_item>
-                          <div class="post swiper-slide">
-                            <s_cover_item_thumbnail><a class="thumbnail rounded shadow-lg" href="[##_cover_item_url_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_cover_item_thumbnail_##]" data-sizes="auto" alt=""></a></s_cover_item_thumbnail>
+                          <div class="post swiper-slide rounded-lg shadow-lg overflow-hidden dark:bg-h-500">
+                            <s_cover_item_thumbnail><a class="thumbnail" href="[##_cover_item_url_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_cover_item_thumbnail_##]" data-sizes="auto" alt=""></a></s_cover_item_thumbnail>
                             <s_cover_item_article_info>
-                              <div class="description flex flex-col">
+                              <div class="description flex flex-col px-2 py-2">
                                 <div class="title"><a class="text-h-800 dark:text-h-200" href="[##_cover_item_url_##]">[##_cover_item_title_##]</a></div>
                                 <div class="metainfo flex gap-x-1 text-sm"><time class="text-h-400">[##_cover_item_simple_date_##]</time><a class="text-sm text-h-400" href="[##_cover_item_category_url_##]">· [##_cover_item_category_##]</a></div>
                                 <div class="summary relative overflow-hidden leading-7 text-sm text-h-500 dark:text-h-400">[##_cover_item_summary_##]</div>
                               </div>
                             </s_cover_item_article_info>
                             <s_cover_item_not_article_info>
-                              <div class="description flex flex-col">
+                              <div class="description flex flex-col px-2 py-2">
                                 <div class="title"><a class="text-h-800 dark:text-h-200" href="[##_cover_item_url_##]">[##_cover_item_title_##]</a></div>
                                 <div class="summary">[##_cover_item_summary_##]</div>
                               </div>
@@ -234,9 +236,9 @@
               <div id="permalink">
                 <header class="h-64 mb-10 flex justify-center items-center border-b border-b-solid border-b-h-200 dark:border-b-h-700 lg:mb-16">
                   <s_article_rep_thumbnail>
-                    <div class='thumbnail absolute right-0 top-0 w-full h-64 before:backdrop-blur before:content-[""] before:absolute before:right-0 before:top-0 before:w-full before:h-64 before:bg-h-900/50 before:z-10 [&+.description]:text-h-200 rounded shadow-lg'><img class="absolute right-0 top-0 w-full h-64 z-0 object-cover transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" src="[##_article_rep_thumbnail_url_##]" alt=""></div>
+                    <div class='thumbnail absolute right-0 top-0 w-full h-64 before:backdrop-blur before:content-[""] before:absolute before:right-0 before:top-0 before:w-full before:h-64 before:bg-h-900/50 before:z-10 [&+.description]:text-h-200'><img class="absolute right-0 top-0 w-full h-64 z-0 object-cover transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" src="[##_article_rep_thumbnail_url_##]" alt=""></div>
                   </s_article_rep_thumbnail>
-                  <div class="description flex flex-col items-center gap-y-3 z-20 relative mx-4 text-h-800 dark:text-h-200 lg:mx-0">
+                  <div class="description flex flex-col px-2 py-2 items-center gap-y-3 z-20 relative mx-4 text-h-800 dark:text-h-200 lg:mx-0">
                     <h1 class="text-center font-bold text-2xl lg:text-3xl">[##_article_rep_title_##]</h1>
                     <div class="flex gap-x-1 text-sm"><time>[##_article_rep_date_##]</time><a href="[##_article_rep_category_link_##]">· [##_article_rep_category_##]</a><span class="admin flex gap-x-1">
                         <s_ad_div><a href="[##_s_ad_m_link_##]">수정</a><a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a><a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s1_label_##]</a></s_ad_div>
@@ -368,9 +370,9 @@
               <div id="page">
                 <header class="h-64 mb-10 flex justify-center items-center border-b border-b-solid border-b-h-200 dark:border-b-h-700 lg:mb-16">
                   <s_article_rep_thumbnail>
-                    <div class='thumbnail absolute right-0 top-0 w-full h-64 before:backdrop-blur before:content-[""] before:absolute before:right-0 before:top-0 before:w-full before:h-64 before:bg-h-900/50 before:z-10 [&+.description]:text-h-200 rounded shadow-lg'><img class="absolute right-0 top-0 w-full h-64 z-0 object-cover transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" src="[##_article_rep_thumbnail_url_##]" alt=""></div>
+                    <div class='thumbnail absolute right-0 top-0 w-full h-64 before:backdrop-blur before:content-[""] before:absolute before:right-0 before:top-0 before:w-full before:h-64 before:bg-h-900/50 before:z-10 [&+.description]:text-h-200'><img class="absolute right-0 top-0 w-full h-64 z-0 object-cover transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" src="[##_article_rep_thumbnail_url_##]" alt=""></div>
                   </s_article_rep_thumbnail>
-                  <div class="description flex flex-col items-center gap-y-3 z-20 relative mx-4 text-h-800 dark:text-h-200 lg:mx-0">
+                  <div class="description flex flex-col px-2 py-2 items-center gap-y-3 z-20 relative mx-4 text-h-800 dark:text-h-200 lg:mx-0">
                     <h1 class="text-center font-bold text-2xl lg:text-3xl">[##_article_rep_title_##]</h1>
                     <div class="flex gap-x-1 text-sm"><time>[##_article_rep_date_##]</time></div>
                   </div>
@@ -437,9 +439,9 @@
           <s_notice_rep>
             <s_index_article_rep>
               <div class="mt-4 px-4 first:mt-20 lg:first:mt-40 lg:mt-0 lg:px-0 lg:w-idx lg:mx-auto" data-mode="list">
-                <div class="post">
-                  <s_notice_rep_thumbnail><a class="thumbnail rounded shadow-lg" href="[##_notice_rep_link_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_notice_rep_thumbnail_url_##]" data-sizes="auto" alt=""></a></s_notice_rep_thumbnail>
-                  <div class="description flex flex-col">
+                <div class="post rounded-lg shadow-lg overflow-hidden dark:bg-h-500">
+                  <s_notice_rep_thumbnail><a class="thumbnail" href="[##_notice_rep_link_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_notice_rep_thumbnail_url_##]" data-sizes="auto" alt=""></a></s_notice_rep_thumbnail>
+                  <div class="description flex flex-col px-2 py-2">
                     <div class="title"><a class="text-h-800 dark:text-h-200 [&_img]:hidden" href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></div>
                     <div class="metainfo flex gap-x-1 text-sm"><time class="text-h-400">[##_notice_rep_date_##]</time></div>
                     <div class="summary relative overflow-hidden text-h-400 leading-7 text-sm">[##_notice_rep_summary_##]</div>
@@ -451,9 +453,9 @@
               <div id="permalink">
                 <header class="h-64 mb-10 flex justify-center items-center border-b border-b-solid border-b-h-200 dark:border-b-h-700 lg:mb-16">
                   <s_notice_rep_thumbnail>
-                    <div class='thumbnail absolute right-0 top-0 w-full h-64 before:backdrop-blur before:content-[""] before:absolute before:right-0 before:top-0 before:w-full before:h-64 before:bg-h-900/50 before:z-10 [&+.description]:text-h-200 rounded shadow-lg'><img class="absolute right-0 top-0 w-full h-64 z-0 object-cover transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" src="[##_notice_rep_thumbnail_url_##]" alt=""></div>
+                    <div class='thumbnail absolute right-0 top-0 w-full h-64 before:backdrop-blur before:content-[""] before:absolute before:right-0 before:top-0 before:w-full before:h-64 before:bg-h-900/50 before:z-10 [&+.description]:text-h-200'><img class="absolute right-0 top-0 w-full h-64 z-0 object-cover transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" src="[##_notice_rep_thumbnail_url_##]" alt=""></div>
                   </s_notice_rep_thumbnail>
-                  <div class="description flex flex-col items-center gap-y-3 z-20 relative mx-4 text-h-800 dark:text-h-200 lg:mx-0">
+                  <div class="description flex flex-col px-2 py-2 items-center gap-y-3 z-20 relative mx-4 text-h-800 dark:text-h-200 lg:mx-0">
                     <h1 class="text-center font-bold text-2xl lg:text-3xl">[##_notice_rep_title_##]</h1>
                     <div class="flex gap-x-1 text-sm"><time>[##_notice_rep_date_##]</time><a class="/notice">· 공지사항</a></div>
                   </div>
@@ -515,17 +517,17 @@
             <section data-mode="[##_list_style_##]">
               <header class="h-64 mb-10 flex justify-center items-center border-b border-b-solid border-b-h-200 dark:border-b-h-700 lg:mb-16">
                 <s_list_image>
-                  <div class='thumbnail absolute right-0 top-0 w-full h-64 before:backdrop-blur before:content-[""] before:absolute before:right-0 before:top-0 before:w-full before:h-64 before:bg-h-900/50 before:z-10 [&+.description]:text-h-200 rounded shadow'><img class="absolute right-0 top-0 w-full h-64 z-0 object-cover transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" src="[##_list_image_##]" alt=""></div>
+                  <div class='thumbnail absolute right-0 top-0 w-full h-64 before:backdrop-blur before:content-[""] before:absolute before:right-0 before:top-0 before:w-full before:h-64 before:bg-h-900/50 before:z-10 [&+.description]:text-h-200'><img class="absolute right-0 top-0 w-full h-64 z-0 object-cover transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" src="[##_list_image_##]" alt=""></div>
                 </s_list_image>
-                <div class="description flex flex-col items-center z-20 relative mx-4 text-center text-h-800 dark:text-h-200 lg:mx-0">
+                <div class="description flex flex-col px-2 py-2 items-center z-20 relative mx-4 text-center text-h-800 dark:text-h-200 lg:mx-0">
                   <h1 class="font-semibold text-2xl lg:text-3xl">[##_list_conform_##]</h1><span class="mt-3 empty:mt-0">[##_list_description_##]</span>
                 </div>
               </header>
               <div class="list px-4 lg:px-0 lg:w-idx lg:mx-auto" x-ref="list">
                 <s_list_rep>
-                  <div class="post">
-                    <s_list_rep_thumbnail><a class="thumbnail rounded shadow" href="[##_list_rep_link_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_list_rep_thumbnail_##]" data-sizes="auto" alt=""></a></s_list_rep_thumbnail>
-                    <div class="description flex flex-col">
+                  <div class="post rounded-lg shadow-lg overflow-hidden dark:bg-h-500">
+                    <s_list_rep_thumbnail><a class="thumbnail" href="[##_list_rep_link_##]"><img class="lazyload object-cover bg-h-100 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_list_rep_thumbnail_##]" data-sizes="auto" alt=""></a></s_list_rep_thumbnail>
+                    <div class="description flex flex-col px-2 py-2">
                       <div class="title"><a class="text-h-800 dark:text-h-200 [&_img]:hidden" href="[##_list_rep_link_##]">[##_list_rep_title_##]</a></div>
                       <div class="metainfo flex gap-x-1 text-sm"><time class="text-h-400">[##_list_rep_regdate_##]</time><a class="text-h-400" href="[##_list_rep_category_link_##]">· [##_list_rep_category_##]</a></div>
                       <div class="summary relative overflow-hidden text-h-400 leading-7 text-sm">[##_list_rep_summary_##]</div>
@@ -621,7 +623,7 @@
                           <div class="text-overflow-hidden text-h-400"><a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
                             <div class="mt-1 text-xs">[##_rctps_rep_simple_date_##]</div>
                           </div>
-                          <s_rctps_rep_thumbnail><img class="lazyload object-cover ml-3 bg-h-100 w-16 h-11 rounded shadow-lg transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_rctps_rep_thumbnail_##]" data-sizes="auto" alt="" width="64" height="44"></s_rctps_rep_thumbnail>
+                          <s_rctps_rep_thumbnail><img class="lazyload object-cover ml-3 bg-h-100 w-16 h-11 transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-100 duration-300" data-src="[##_rctps_rep_thumbnail_##]" data-sizes="auto" alt="" width="64" height="44"></s_rctps_rep_thumbnail>
                         </li>
                       </s_rctps_popular_rep>
                     </ul>

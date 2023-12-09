@@ -32,6 +32,13 @@
 5. Use the user's configured `sans` font-feature-settings by default.
 */
 
+/* Custom Fonts */
+@font-face {
+  font-family: "ChosunGu";
+  src: url("./images/ChosunGu.TTF");
+  font-weight: normal;
+}
+
 html {
   line-height: 1.5;
   /* 1 */
@@ -43,6 +50,7 @@ html {
   tab-size: 4;
   /* 3 */
   font-family:
+    ChosunGu,
     SUIT,
     ui-sans-serif,
     system-ui,
@@ -927,23 +935,17 @@ video {
 
 .rotate-90 {
   --tw-rotate: 90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .scale-75 {
   --tw-scale-x: 0.75;
   --tw-scale-y: 0.75;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @keyframes loading {
@@ -1524,16 +1526,8 @@ video {
 
 .backdrop-blur {
   --tw-backdrop-blur: blur(8px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
-    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
-    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
-    var(--tw-backdrop-sepia);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
-    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
-    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
-    var(--tw-backdrop-sepia);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .transition {
@@ -1702,6 +1696,7 @@ button {
 }
 
 @media not all and (min-width: 1100px) {
+
   .swiper-button-next,
   .swiper-button-prev {
     display: none !important;
@@ -1788,16 +1783,8 @@ button {
 .before\:backdrop-blur::before {
   content: var(--tw-content);
   --tw-backdrop-blur: blur(8px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
-    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
-    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
-    var(--tw-backdrop-sepia);
-  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
-    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
-    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
-    var(--tw-backdrop-opacity) var(--tw-backdrop-saturate)
-    var(--tw-backdrop-sepia);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .before\:content-\[\"\"\]::before {
@@ -1875,36 +1862,36 @@ button {
 /* 배경 */
 .dark .dark\:bg-h-800 {
   --tw-bg-opacity: 1;
-  /* background-color: rgb(30 31 33 / var(--tw-bg-opacity)); */
   background-color: rgb(30 30 46 / var(--tw-bg-opacity));
 }
 
 /* 사이드 바 */
 .dark .dark\:bg-h-700 {
   --tw-bg-opacity: 1;
-  /* background-color: rgb(41 42 45 / var(--tw-bg-opacity)); */
-  /* background-color: rgb(49 50 69 / var(--tw-bg-opacity)); */
   background-color: rgb(24 24 37 / var(--tw-bg-opacity));
 }
 
 /* 진행바 */
 .dark .dark\:bg-h-200 {
   --tw-bg-opacity: 1;
-  /* background-color: rgb(244 244 246 / var(--tw-bg-opacity)); */
   background-color: rgb(137 180 251 / var(--tw-bg-opacity));
 }
 
 /* 상단바 */
 .dark .dark\:bg-h-800\/80 {
-  /* background-color: rgb(30 31 33 / 0.8); */
   background-color: rgb(24 24 38 / var(--tw-bg-opacity));
 }
 
 /* 검색창 */
 .dark .dark\:bg-h-600 {
   --tw-bg-opacity: 1;
-  /* background-color: rgb(53 54 56 / var(--tw-bg-opacity)); */
   background-color: rgb(30 30 46 / var(--tw-bg-opacity));
+}
+
+/* 포스트 */
+.dark .dark\:bg-h-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 50 68 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:text-h-200 {
@@ -1924,15 +1911,12 @@ button {
 
 .dark .dark\:text-h-blue {
   --tw-text-opacity: 1;
-  /* color: rgb(93 176 215 / var(--tw-text-opacity)); */
   color: rgb(137 180 250 / var(--tw-text-opacity));
 }
 
 .dark .dark\:invert {
   --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
-    var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .dark .dark\:before\:bg-h-400::before {
@@ -2161,9 +2145,7 @@ button {
 
   .lg\:-translate-y-6 {
     --tw-translate-y: -1.5rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:grid-cols-3 {
@@ -2264,7 +2246,7 @@ button {
   }
 }
 
-.\[\&\+\.description\]\:text-h-200 + .description {
+.\[\&\+\.description\]\:text-h-200+.description {
   --tw-text-opacity: 1;
   color: rgb(244 244 246 / var(--tw-text-opacity));
 }
@@ -2273,12 +2255,12 @@ button {
   display: none;
 }
 
-.\[\&\>div\]\:before\:hidden > div::before {
+.\[\&\>div\]\:before\:hidden>div::before {
   content: var(--tw-content);
   display: none;
 }
 
-.\[\&\:last-child\>div\]\:before\:hidden:last-child > div::before {
+.\[\&\:last-child\>div\]\:before\:hidden:last-child>div::before {
   content: var(--tw-content);
   display: none;
 }
@@ -2658,9 +2640,7 @@ button {
 
   --tw-invert: invert(100%);
 
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
-    var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 #content .contents_style table[data-ke-align] td,
@@ -2720,6 +2700,7 @@ button {
 }
 
 @media not all and (min-width: 1100px) {
+
   #content .contents_style figure.imageblock.alignCenter,
   #content .contents_style figure.imagegridblock {
     width: 100% !important;
@@ -2876,24 +2857,9 @@ button {
   color: rgb(102 102 110 / var(--tw-text-opacity));
 }
 
-.dark
-  #content
-  .contents_style
-  figure[data-ke-type="opengraph"]
-  .og-text
-  .og-title,
-.dark
-  #content
-  .contents_style
-  figure[data-ke-type="opengraph"]
-  .og-text
-  .og-desc,
-.dark
-  #content
-  .contents_style
-  figure[data-ke-type="opengraph"]
-  .og-text
-  .og-host {
+.dark #content .contents_style figure[data-ke-type="opengraph"] .og-text .og-title,
+.dark #content .contents_style figure[data-ke-type="opengraph"] .og-text .og-desc,
+.dark #content .contents_style figure[data-ke-type="opengraph"] .og-text .og-host {
   --tw-text-opacity: 1;
 
   color: rgb(244 244 246 / var(--tw-text-opacity));
@@ -2942,9 +2908,7 @@ button {
 
   --tw-invert: invert(100%);
 
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
-    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
-    var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 #content .contents_style [data-ke-type="moreLess"] {
@@ -2977,10 +2941,7 @@ button {
   content: var(--tw-content);
 }
 
-#content
-  .contents_style
-  [data-ke-type="moreLess"].open
-  .btn-toggle-moreless::before {
+#content .contents_style [data-ke-type="moreLess"].open .btn-toggle-moreless::before {
   font-weight: 700;
 
   --tw-content: "\f0ab";
@@ -3024,10 +2985,7 @@ button {
   color: rgb(244 244 246 / var(--tw-text-opacity));
 }
 
-#content
-  .contents_style
-  [data-ke-type="moreLess"]
-  .btn-toggle-moreless::before {
+#content .contents_style [data-ke-type="moreLess"] .btn-toggle-moreless::before {
   margin-right: 0.375rem;
 
   font-weight: 700;
@@ -3100,10 +3058,7 @@ button {
   color: rgb(53 54 56 / var(--tw-text-opacity));
 }
 
-.dark
-  #content
-  .contents_style
-  blockquote[data-ke-style][data-ke-style="style1"] {
+.dark #content .contents_style blockquote[data-ke-style][data-ke-style="style1"] {
   --tw-text-opacity: 1;
 
   color: rgb(244 244 246 / var(--tw-text-opacity));
@@ -3135,10 +3090,7 @@ button {
   color: rgb(153 153 161 / var(--tw-text-opacity));
 }
 
-.dark
-  #content
-  .contents_style
-  blockquote[data-ke-style][data-ke-style="style2"] {
+.dark #content .contents_style blockquote[data-ke-style][data-ke-style="style2"] {
   --tw-border-opacity: 1;
 
   border-color: rgb(153 153 161 / var(--tw-border-opacity));
@@ -3158,10 +3110,7 @@ button {
   color: rgb(153 153 161 / var(--tw-text-opacity));
 }
 
-.dark
-  #content
-  .contents_style
-  blockquote[data-ke-style][data-ke-style="style3"] {
+.dark #content .contents_style blockquote[data-ke-style][data-ke-style="style3"] {
   --tw-bg-opacity: 1;
 
   background-color: rgb(41 42 45 / var(--tw-bg-opacity));
@@ -3207,11 +3156,7 @@ button {
   color: rgb(244 244 246 / var(--tw-text-opacity));
 }
 
-#content
-  .container_postbtn
-  .postbtn_like
-  > .wrap_btn:not([id^="reaction-"])
-  > button,
+#content .container_postbtn .postbtn_like>.wrap_btn:not([id^="reaction-"])>button,
 #content .container_postbtn .btn_subscription {
   display: inline-block;
 
@@ -3245,11 +3190,7 @@ button {
   transition-duration: 200ms;
 }
 
-#content
-  .container_postbtn
-  .postbtn_like
-  > .wrap_btn:not([id^="reaction-"])
-  > button::before,
+#content .container_postbtn .postbtn_like>.wrap_btn:not([id^="reaction-"])>button::before,
 #content .container_postbtn .btn_subscription::before {
   content: var(--tw-content);
 
@@ -3258,11 +3199,7 @@ button {
   color: rgb(102 102 110 / var(--tw-text-opacity));
 }
 
-#content
-  .container_postbtn
-  .postbtn_like
-  > .wrap_btn:not([id^="reaction-"])
-  > button:hover,
+#content .container_postbtn .postbtn_like>.wrap_btn:not([id^="reaction-"])>button:hover,
 #content .container_postbtn .btn_subscription:hover {
   --tw-bg-opacity: 1;
 
@@ -3270,12 +3207,7 @@ button {
 }
 
 /* Three icons of post on right */
-.dark
-  #content
-  .container_postbtn
-  .postbtn_like
-  > .wrap_btn:not([id^="reaction-"])
-  > button,
+.dark #content .container_postbtn .postbtn_like>.wrap_btn:not([id^="reaction-"])>button,
 .dark #content .container_postbtn .btn_subscription {
   --tw-bg-opacity: 1;
 
@@ -3283,12 +3215,7 @@ button {
   background-color: rgb(24 24 37 / var(--tw-bg-opacity));
 }
 
-.dark
-  #content
-  .container_postbtn
-  .postbtn_like
-  > .wrap_btn:not([id^="reaction-"])
-  > button::before,
+.dark #content .container_postbtn .postbtn_like>.wrap_btn:not([id^="reaction-"])>button::before,
 .dark #content .container_postbtn .btn_subscription::before {
   content: var(--tw-content);
 
@@ -3297,12 +3224,7 @@ button {
   color: rgb(244 244 246 / var(--tw-text-opacity));
 }
 
-.dark
-  #content
-  .container_postbtn
-  .postbtn_like
-  > .wrap_btn:not([id^="reaction-"])
-  > button:hover,
+.dark #content .container_postbtn .postbtn_like>.wrap_btn:not([id^="reaction-"])>button:hover,
 .dark #content .container_postbtn .btn_subscription:hover {
   --tw-bg-opacity: 1;
 
@@ -3330,11 +3252,7 @@ button {
 }
 
 #content .container_postbtn .postbtn_like .wrap_btn button::before,
-#content
-  .container_postbtn
-  .postbtn_like
-  .wrap_btn
-  button[data-entry-id]::before,
+#content .container_postbtn .postbtn_like .wrap_btn button[data-entry-id]::before,
 #content .container_postbtn .postbtn_like .wrap_btn .uoc-count::before {
   font-size: 0.875rem;
 
@@ -3373,44 +3291,25 @@ button {
   background-color: rgb(17 17 27 / var(--tw-bg-opacity));
 }
 
-#content
-  .container_postbtn
-  .postbtn_like
-  .wrap_btn[id^="reaction-"]
-  button:hover {
+#content .container_postbtn .postbtn_like .wrap_btn[id^="reaction-"] button:hover {
   --tw-bg-opacity: 1;
 
   background-color: rgb(53 54 56 / var(--tw-bg-opacity));
 }
 
-#content
-  .container_postbtn
-  .postbtn_like
-  .wrap_btn[id^="reaction-"]
-  button
-  .uoc-icon {
+#content .container_postbtn .postbtn_like .wrap_btn[id^="reaction-"] button .uoc-icon {
   --tw-text-opacity: 1;
 
   color: rgb(244 244 246 / var(--tw-text-opacity));
 }
 
-#content
-  .container_postbtn
-  .postbtn_like
-  .wrap_btn[id^="reaction-"]
-  button
-  .uoc-count {
+#content .container_postbtn .postbtn_like .wrap_btn[id^="reaction-"] button .uoc-count {
   font-weight: 700;
 
   line-height: 1;
 }
 
-#content
-  .container_postbtn
-  .postbtn_like
-  .wrap_btn[id^="reaction-"]
-  button
-  .uoc-count::before {
+#content .container_postbtn .postbtn_like .wrap_btn[id^="reaction-"] button .uoc-count::before {
   margin-right: 0.375rem;
 
   font-size: 0.875rem;
@@ -3432,11 +3331,7 @@ button {
   line-height: 1;
 }
 
-#content
-  .container_postbtn
-  .postbtn_like
-  .wrap_btn.wrap_btn_share
-  .btn_share::before {
+#content .container_postbtn .postbtn_like .wrap_btn.wrap_btn_share .btn_share::before {
   font-weight: 700;
 
   --tw-content: "\f1e0";
@@ -3452,11 +3347,7 @@ button {
   line-height: 1;
 }
 
-#content
-  .container_postbtn
-  .postbtn_like
-  .wrap_btn
-  button[data-entry-id]::before {
+#content .container_postbtn .postbtn_like .wrap_btn button[data-entry-id]::before {
   font-weight: 700;
 
   --tw-content: "\f200";
@@ -3472,11 +3363,7 @@ button {
   line-height: 1;
 }
 
-#content
-  .container_postbtn
-  .postbtn_like
-  .wrap_btn.wrap_btn_etc
-  .btn_etc1::before {
+#content .container_postbtn .postbtn_like .wrap_btn.wrap_btn_etc .btn_etc1::before {
   font-weight: 700;
 
   --tw-content: "\f0ad";
@@ -3492,11 +3379,7 @@ button {
   line-height: 1;
 }
 
-#content
-  .container_postbtn
-  .postbtn_like
-  .wrap_btn.wrap_btn_etc
-  .btn_etc2::before {
+#content .container_postbtn .postbtn_like .wrap_btn.wrap_btn_etc .btn_etc2::before {
   font-weight: 700;
 
   --tw-content: "\f141";
@@ -3948,9 +3831,7 @@ div[data-tistory-react-app="Namecard"] {
   [data-mode="zigzag"] .post:nth-child(2n + 1) img {
     --tw-translate-y: -1.5rem;
     --tw-translate-x: 1.5rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   [data-mode="zigzag"] .post:nth-child(2n) {
@@ -3960,9 +3841,7 @@ div[data-tistory-react-app="Namecard"] {
   [data-mode="zigzag"] .post:nth-child(2n) img {
     --tw-translate-y: -1.5rem;
     --tw-translate-x: -1.5rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 
