@@ -19,7 +19,7 @@ const copyBlockCode = async (target = null) => {
   }
 };
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", function() {
   const codeBlocks = document.querySelectorAll("pre > code");
   for (const codeBlock of codeBlocks) {
     const codes = codeBlock.innerHTML.match(/(.*)(\n|.*$)/g);
